@@ -5,6 +5,7 @@
 #include "salle_cm.h"
 #include "salle_td.h"
 #include "salle_tp.h"
+#include "creneau.h"
 
 /*TODO Si temps : penser à l'utilisation de toupper et tolower pour les prénoms et noms */
 
@@ -57,6 +58,11 @@ int main(void){
 	cout << sCm1 << endl;
 	cout << sTd1 << endl;
 	cout << s1 << endl;
-
+	
+	cout << endl;
+	Creneau c1("02/03/2012", 2, 8, &sCm1, &gr601, &m1);
+	cout << c1 << endl;
+	
+	return 0;
 	
 } 
