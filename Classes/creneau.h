@@ -31,9 +31,9 @@ class Creneau {
 		std::string date_;
 		int duree_;
 		int heure_debut_;
-		Salle * salle_;
-		Groupe * groupe_;
-		Module * module_;
+		Salle* salle_;
+		Groupe* groupe_;
+		Module* module_;
 		
 };
 
