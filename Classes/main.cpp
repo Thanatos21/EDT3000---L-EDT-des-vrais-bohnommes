@@ -59,6 +59,7 @@ int main(void){
 	cout << sTd1 << endl;
 	cout << s1 << endl;
 	
+	// Il faudra modifier les affichages, manque de cohérence pour les créneaux
 	cout << endl;
 	Creneau c1("02/03/2012", 2, 8, &sCm1, &gr601, &m1);
 	cout << c1 << endl;
