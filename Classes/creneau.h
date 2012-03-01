@@ -36,6 +36,8 @@ class Creneau {
 		Module * module_;
 		
 };
+
+// Redéfinition des opérateurs
 std::ostream& operator<<(std::ostream& os, const Creneau& cr);
 
 #endif
