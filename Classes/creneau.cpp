@@ -9,9 +9,9 @@ Creneau::Creneau(const Creneau& c) : date_(c.date_), duree_(c.duree_), heure_deb
 Creneau::Creneau(const std::string& date, const int& duree, const int& heure_debut, Salle * sal, Groupe * gr, Module * mod) : date_(date), duree_(duree), heure_debut_(heure_debut), salle_(sal), groupe_(gr), module_(mod) {}
 
 Creneau::~Creneau() {
-	delete salle_;
-	delete groupe_;
-	delete module_;
+	//delete salle_;
+	//delete groupe_;
+	//delete module_;
 }
 
 // Mutateurs
@@ -40,26 +40,26 @@ int Creneau::getHeure_debut() const {
 	return heure_debut_;
 }
 
-Salle * Creneau::getSalle() const {
+Salle* Creneau::getSalle() const {
 	return salle_;
 }
 
-Groupe * Creneau::getGroupe() const {
+Groupe* Creneau::getGroupe() const {
 	return groupe_;
 }
 
-Module * Creneau::getModule() const {
+Module* Creneau::getModule() const {
 	return module_;
 }
 
 // Redéfinition des opérateurs
 std::ostream& operator<< (std::ostream& os, const Creneau& cr) {
-	os << "Date : " << cr.getDate() << std::endl;
-	os << "Heure de début : " << cr.getHeure_debut() << std::endl;
-	os << "Duree : " << cr.getDuree() << std::endl;
-	os << "Salle : " << *(cr.getSalle()) << std::endl;
-	os << "Groupe : " << *(cr.getGroupe()) << std::endl;
-	os << "Module : " << *(cr.getModule());
+	os << "-------------------------------------------------------------------------------------------------------" << std::endl;
+	os << "Le " << cr.getDate() << ", de " << cr.getHeure_debut() << "h à " << cr.getHeure_debut() + cr.getDuree() << "h :" << std::endl;
+	os << "-------------------------------------------------------------------------------------------------------" << std::endl;
+	os << *(cr.getSalle()) << std::endl;
+	os << *(cr.getGroupe()) << std::endl;
+	os << *(cr.getModule());
 	
 	return os;
 }
