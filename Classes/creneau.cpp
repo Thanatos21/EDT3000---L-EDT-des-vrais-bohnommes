@@ -1,6 +1,7 @@
 #include <iostream>
 #include "creneau.h"
 
+// Constructeurs et destructeur
 Creneau::Creneau() : date_("01/01/2012"), duree_(1), heure_debut_(8) {}
 
 Creneau::Creneau(const Creneau& c) : date_(c.date_), duree_(c.duree_), heure_debut_(c.heure_debut_) {}
@@ -13,6 +14,7 @@ Creneau::~Creneau() {
 	delete module_;
 }
 
+// Mutateurs
 void Creneau::setDate(const std::string& date) {
 	date_ = date;
 }
@@ -25,6 +27,7 @@ void Creneau::setHeure_debut(const int& heure_debut) {
 	heure_debut_ = heure_debut;
 }
 
+// Accesseurs
 std::string Creneau::getDate() const {
 	return date_;
 }
@@ -49,6 +52,7 @@ Module * Creneau::getModule() const {
 	return module_;
 }
 
+// Redéfinition des opérateurs
 std::ostream& operator<< (std::ostream& os, const Creneau& cr) {
 	os << "Date : " << cr.getDate() << std::endl;
 	os << "Heure de début : " << cr.getHeure_debut() << std::endl;
