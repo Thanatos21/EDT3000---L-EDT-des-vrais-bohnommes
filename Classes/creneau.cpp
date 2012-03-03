@@ -57,9 +57,9 @@ std::ostream& operator<< (std::ostream& os, const Creneau& cr) {
 	os << "-------------------------------------------------------------------------------------------------------" << std::endl;
 	os << "Le " << cr.getDate() << ", de " << cr.getHeure_debut() << "h à " << cr.getHeure_debut() + cr.getDuree() << "h :" << std::endl;
 	os << "-------------------------------------------------------------------------------------------------------" << std::endl;
-	os << *(cr.getSalle()) << std::endl;
-	os << *(cr.getGroupe()) << std::endl;
-	os << *(cr.getModule());
+	os << "Salle : " << (cr.getSalle())->getNumero() << std::endl;
+	os << "Groupe : " << (cr.getGroupe())->getNumeroGroupe() << std::endl;
+	os << "Module : " << (cr.getModule())->getCode() << " - " << (cr.getModule())->getTitre();
 	
 	return os;
 }
