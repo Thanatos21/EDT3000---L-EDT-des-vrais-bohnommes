@@ -39,5 +39,5 @@ class Module {
 		Enseignant* enseignant_;
 		
 };
-std::ostream& operator <<(std::ostream& os, const Module& m);
+std::ostream& operator <<(std::ostream& os, const Module& m);	//test commit
 #endif
